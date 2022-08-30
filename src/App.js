@@ -1,10 +1,19 @@
+// Routing
+import { Routes, Route } from 'react-router-dom';
+
+// Pages
+import SheetsLibrary from './pages/SheetsLibrary';
+import AuthoringModule from './pages/AuthoringModule';
+
+// CSS
 import './App.css';
 
 const App = () => {
 	return (
-		<div>
-			<h1>Hello World</h1>
-		</div>
+		<Routes>
+			<Route exact path='/' element={<SheetsLibrary />} />
+			<Route exact path='/author' element={<AuthoringModule />} />
+		</Routes>
 	);
 };
 
